@@ -28,8 +28,10 @@
 			<a href='javascript:history.go(-1)'>回上一页</a></p>";
 			exit();
 	}
-	if($current_user != $ID){
-			echo "<p style='color:red;font-size:28px'>当前签核人为 $current_user , 你无权限签核此申请单<br />
+	$ziXunKeZhang = array('45224','22305','00279');
+	
+	if(!in_array($current_user,$ziXunKeZhang)){
+			echo "<p style='color:red;font-size:28px'>当前签核人为 $current_user ,当前账号为 $ID, 你无权限签核此申请单<br />
 			<a href='javascript:history.go(-1)'>回上一页</a></p>";
 			exit();
 	}
