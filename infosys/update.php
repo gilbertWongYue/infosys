@@ -17,7 +17,7 @@ $nextuser_sql = "select employee_no,name from employee where substr(depart_no,0,
 				and substr(employee_no,0,1)<>'9' and substr(lead_code,0,1)>=5  order by 1 desc ";
 $nextuserArr = selectArray($nextuser_sql);
 
-$sql_sys="select ap_key,ap_name from public.info_running_sys where stop_use!='Y'  order by kind";
+$sql_sys="select ap_key,ap_name from public.info_running_sys where stop_use!='Y'  order by ap_key";
 $sys_array=selectMysql($sql_sys);
 $proper_array=propertyNeed();
 ?>
